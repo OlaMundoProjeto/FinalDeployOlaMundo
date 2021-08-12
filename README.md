@@ -2,7 +2,7 @@ Projeto Olá mundo.
 
 Prezados, olá!👋
 
-Para a execução deste projeto em seu computador, é recomendável que você instale @angular-devkit/build-angularcomo dependência dev. 
+Para a execução deste projeto em seu computador, é recomendável que você instale @angular-devkit/build-angular como dependência dev. 
 Este pacote foi introduzido recentemente no Angular 6.0
 
 Comandos:
