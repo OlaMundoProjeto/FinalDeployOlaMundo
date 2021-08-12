@@ -1,0 +1,53 @@
+.bg-principal{
+  background-color: rgb(216, 216, 236);
+}
+
+
+.img{
+  height: 200px;
+  width: 400px;
+  align-self: center;
+}
+
+.textsize{
+  size: 16px;
+}
+
+.conteudos {
+  display:flex;
+  flex-flow: row;
+  justify-content: center;/*alinhamento (esquerda,direito,centro)*/
+  align-items: center; /*alinhamento dos itens (esquerda,direito,centro)*/
+  background-color: rgb(128, 165, 170);
+}
+
+.colaborador{
+  padding: 10px;
+}
+
+.img-colaboradores{
+  size: 300px;
+}
+
+.negrito{
+  text-decoration: dotted;
+}
+
+.h3-color{
+ color: #008080 !important ;
+}
+
+.h4-cor{
+  color: rgb(223, 119, 0);
+}
+
+#mostarda{
+  background-color: rgb(223, 119, 0) ;
+ height: 25px;
+}
+
+.txt-logo:hover{
+  color: red !important;
+}
+
+

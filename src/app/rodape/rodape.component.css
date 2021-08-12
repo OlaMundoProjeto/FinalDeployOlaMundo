@@ -1,0 +1,21 @@
+
+#rodape{
+  background-color: #2F9D94!important;
+}
+
+#h2{
+  color: white;
+}
+
+.h4{
+  margin-top: 10px;
+}
+
+.links{
+color:#f4a261;
+text-decoration: none;
+
+}
+.links:hover{
+  color: white;
+}
