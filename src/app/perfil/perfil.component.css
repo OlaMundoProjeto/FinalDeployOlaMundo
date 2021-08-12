@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0
+}
+
+#container {
+    margin: 0;
+    padding: 0;
+    height: 650px;
+    width: 100%;
+    background-color:rgb(54, 0, 109)
+}
+
+#perfilcontainer {
+    width: 350px;
+    height: 450px;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+    top: 100px;
+    left: 38%;
+    box-shadow: 0 0 25px violet
+}
+
+#parte1 {
+    width: 350px;
+    height: 300px;
+    background-color: black;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px
+}
+
+
+
+#pessoa {
+    
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: relative;
+    top: 50px;
+    left: 34.5%;
+    cursor: pointer
+
+}
+
+#nome {
+    font-family: 'Rubik', sans-serif;
+    position: relative;
+    top: 55px;
+    text-align: center;
+    font-size: 20px;
+    color: white
+}
+#pronomes {
+position: relative;
+top: 55px ;
+text-align: center;
+color: gainsboro;
+font-family: 'Rubik', sans-serif;
+
+font-size: 15px
+}
+
+
+
+#seguir {
+    position: relative;
+    top: 90px;
+    left: 30%;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    background-color: white;
+
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: purple
+}
+
+#postagem,
+#numero1,
+#seguidores,
+#numero2,
+#seguindo,
+#numero3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px
+}
+
+#postagem {
+    position: relative;
+    top: 50px;
+    left: 12%;
+    color: gray
+}
+
+#numero1 {
+    position: relative;
+    top: 46px;
+    left: 20%
+}
+
+#seguidores {
+    position: relative;
+    top: -30px;
+    left: 40%;
+    color: gray
+}
+
+#numero2 {
+    position: relative;
+    top: -35px;
+    left: 50%
+}
+
+#seguindo {
+    position: relative;
+    top: -110px;
+    left: 68%;
+    color: gray
+}
+
+#numero3 {
+    position: relative;
+    top: -115px;
+    left: 77%
+}
+
