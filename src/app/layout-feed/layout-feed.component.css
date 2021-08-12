@@ -78,6 +78,7 @@ color: #ffffff !important;
 color: #008080 !important;
 opacity: 0.7 !important;
 } */
+<<<<<<< HEAD
 .light {
   --mainColor: #2F9D94;
   --hoverColor: #5bacdf;
@@ -457,6 +458,9 @@ header .container {
     font-size: 0.8rem;
   }
 }
+=======
+
+>>>>>>> a944952c2e84e1f880e4e87cd0d197c1e4a17dd1
 
 
 
