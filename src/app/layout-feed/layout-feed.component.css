@@ -33,8 +33,8 @@ font-family: 'Spartan', sans-serif;
 .fs-18 {
 
 font-family: 'Sacramento', cursive;
-font-size: 30pt;
-color: rgb(210, 187, 231);
+font-size: 36pt;
+color: rgb(26, 69, 75);
 
 }
 
@@ -42,12 +42,15 @@ color: rgb(210, 187, 231);
 
 font-family: 'Sacramento', cursive;
 font-size: 38pt;
-color: rgb(237, 150, 250);
+color: rgb(3, 56, 58);
 margin-right: 100px;
 
 }
 .novo{
-  padding-top:12%;padding-bottom:12%;background:linear-gradient(90deg,rgba(57,56,65,0.7) 0%,rgba(72,70,91,0.1) 100%);background-color:rgba(72, 70, 91, 0.15);
+  padding-top:12%;
+  padding-bottom:12%;
+  background:linear-gradient(90deg,rgba(57,56,65,0.7) 0%,rgba(72,70,91,0.1) 100%);
+  background-color:rgba(72, 70, 91, 0.15);
 }
 
 /* .img-perfil{
