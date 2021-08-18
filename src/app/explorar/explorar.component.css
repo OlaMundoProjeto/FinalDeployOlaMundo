@@ -1,72 +1,104 @@
-ul {
-  width: 100px;
-  list-style: none;
+* {
+
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan', sans-serif;
+  color: rgb(233, 115, 47);
+}
+
+body {
   display: flex;
-  margin: 10px auto;
-  
+  justify-content: center;
+  align-items: center;
+  background: #084750;
 }
 
-.min {
-  width: 200px;
-  padding: 10px
+.container {
+position: relative;
+width: 1100px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+padding: 200px;
 }
 
-.lbox {
+.container .card {
+
+  position: relative;
+  max-width: 500px;
+  height: 300px;
+  margin: 30px 20px;
+  padding: 35px 25px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 5px 60px rgba(114, 243, 221, 0.808);
+  transition: 0.7s ease-in-out;
+}
+
+.container .card:hover {
+  height: 450px;
+}
+
+.container .card .imgBox {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -40px;
+  left: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.container .card .imgBox img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.container .card .content {
+  position: relative;
+  margin-top: -120px;
+  padding: 50px 45px;
+  text-align: center;
+  color: rgb(182, 27, 27);
   visibility: hidden;
   opacity: 0;
+  transition: 0.7s ease-in-out;
+
 }
 
-.lbox:target {
-  opacity: 1;
+.container .card:hover .content {
   visibility: visible;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(10, 10, 10, .7);
-
-  position: fixed
-}
-
-.box_img {
-  width: 1000px;
-  margin: 150px auto;
-
-}
-
-.box_img img {
-  opacity: 0;
-}
-
-.lbox:target .box_img img {
   opacity: 1;
-  transition: opacity .4s linear;
+  margin-top: -20px;
+  transition-delay: 0.3s;
 }
 
-.btn {
-  color: #fff;
-  font-family: 'Arial';
-  text-decoration: none;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  font-size: 40px;
-  text-align: center;
+.carousel-inner {
 
- }
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 5px 120px rgba(42, 150, 132, 0.808);
+  transition: 0.7s ease-in-out;
+}
 
-  #prev {
-    left: 5%;
-    top: 45%;
-  }
+.carousel-inner .item
+{
+  box-shadow: 0 5px 80px rgba(0, 0, 0, 0.808);
+}
 
-  #next {
-    right: 5%;
-    top: 45%;
-  }
+#h2 {
+  margin: 0;
+  padding: 5px;
+  font-size: 30px;
+  color: rgb(255, 145, 0);
+}
 
-  #close {
-    right: 2%;
-    top: 0%;
-  }
+#h2 .li {
+  margin: 5px;
+  padding: 5px;
+  font-size: 30px;
+  color: rgb(255, 145, 0);
 
+}
