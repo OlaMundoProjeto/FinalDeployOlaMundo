@@ -1,27 +1,68 @@
-
-.bg-menu{
-  background-color:#2F9D94 !important;
-  padding-top: 0;
-  margin-top: 0;
-  height: 110px;
-  /* opacity: 0.7 !important; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+.wrapper {
+  font-family: "Roboto", sans-serif;
+  width: 1152px;
+  margin: 0 auto;
+  padding: 0 100px;
 }
 
-.fotoMenu{
-margin-top: 2px;
+
+/* Header - Navigation */
+
+.desktop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: light ;
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 2px 6px;
+  padding-right: 0;
+
+  position: relative;
+  z-index: 200;
+
+  width: 950px;
+  top: 28px;
 }
 
-.fonterodape {
-  font-size: 12pt;
-  color: rgb(133, 214, 228);
-  font-family: 'Spartan', sans-serif;
+.desktop-nav .menu-items {
+  display: flex;
+  list-style: none;
 }
 
-a {
-  cursor: pointer;
+.desktop-nav .menu-items li {
+  margin: 0 20px;
+  height: 0%;
+}
+.desktop-nav .menu-items li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
 }
 
-.cormenu {
+.desktop-nav .menu-items li a.active::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: purple;
+  left: 0;
+  bottom: -14px;
+}
 
-  background-color: rgb(16, 68, 82);
+.desktop-nav .menu-items li a.btn {
+  color: white ;
+}
+
+a.btn {
+  background: #5e64ac;
+  color: white ;
+  border-radius: 24px;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 400ms;
 }

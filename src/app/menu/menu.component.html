@@ -1,37 +1,37 @@
-<nav class="navbar navbar-expand-lg navbar-danger bg-menu" id="menu">
-  <div class="container-fluid">
-    <div class="fotoMenu">
-      <a routerLink="/quemsomos"><img src="https://i.imgur.com/RSHaT8i.gif" alt="" width="150px" height="100px"></a>
-    </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
+<nav class="navbar navbar-expand-lg navbar-danger bg-menu" id="menu"></nav>
+  <div class="wrapper">
 
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto d-flex align-items-center">
-        <li class="nav-item active">
-          <img src="{{foto}}" alt="Imagem do user" width="50px" height="50px"
-            class="img-fluid rounded-circle">
-        </li>
-        <div class="fonterodape">
-        <li class="nav-item pl-3">
-          <p class="m-0 fs-16">Olá, {{nome}}</p>
-        </li>
+
+    <nav class="desktop-nav">
+      <div class="logo">
+        <a routerLink="/quemsomos">
+          <img src="../../assets/img/logo_ola_mundo.png" alt=""  width="70px" height="100px" />
+        </a>
       </div>
-        <li class="nav-item p-0 pl-1">
-          <a [routerLink]="['/usuario-edit', id]">
-            <p class="text-white fs-16 m-0">
-              <i class="fa fa-pencil-square-o" arial-hidden="true"></i>
-            </p>
-          </a>
+
+
+
+      <ul class="menu-items">
+        <li>
+          <a  routerLink="/quemsomos" class="active">Sobre Nós</a>
+        </li>
+
+        <li>
+          <a href="#postagens">Muses</a>
+        </li>
+
+        <li>
+          <a href="#postagens">Parques</a>
+        </li>
+
+        <li>
+          <a href="#postagens">Restaurantes</a>
+        </li>
+
+        <li>
+          <a (click)='sair()' class="btn" >Sair <i class="fa fa-sign-out"></i></a>
         </li>
       </ul>
-      <ul class="navbar-nav ml-auto d-flex align-items-center">
-        <li class="nav-item pl-3">
-          <a (click)='sair()' class="m-0 font-weight-bold text-white fs-16">Sair <i class="fa fa-sign-out"></i></a>
-        </li>
-      </ul>
+    </nav>
     </div>
-</nav>
+
