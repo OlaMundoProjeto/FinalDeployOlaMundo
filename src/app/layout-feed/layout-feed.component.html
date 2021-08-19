@@ -11,6 +11,9 @@
 
         </div>
       </div>
+
+                              <!-- @@@@@@@@@@@@@@@@@@ NOVA POSTAGEM @@@@@@@@@@@@@@@@@@ -->
+
       <div class="row d-flex justify-content-center mt-3 mb-5">
         <div class="col-md-5">
           <button class="btn btn-light mr-3" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
@@ -18,6 +21,10 @@
         </div>
 
        </div>
+
+       <!-- lembrar de atualizar/perguntar como fazer para aparecer a foto de quem está postando! -->
+
+
 <!-- <<<<<<< HEAD
 
           </div>
@@ -76,7 +83,8 @@
                   <div class="row d-flex justify-content-center mt-5 mb-5">
                     <div class="col-md-4">
                       <div class="form-group">
-                        <input type="text" class="form-control" name="" id="tituloPostagem" placeholder="Pesquise aqui uma postagem pelo titulo"[(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
+                        <input type="text" class="form-control" name="" id="tituloPostagem"
+                        placeholder="Pesquise aqui uma postagem pelo titulo"[(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
                       </div>
                     </div>
                   </div>
@@ -188,24 +196,33 @@
                       <div class="modal-body">
 
                         <div class="form-group">
-                          <label for="titulo">Título</label>
+                          <label for="titulo">Título:</label>
                           <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
                             placeholder="Digite o título da nova postagem">
                         </div>
 
                         <div class="form-group">
-                          <label for="texto">Texto</label>
-                          <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"></textarea>
+                          <label for="texto">Texto:</label>
+                          <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto"
+                          placeholder="Digite a descrição do post!" rows="3"></textarea>
                         </div>
 
                         <div class="form-group">
-                          <label for="texto">Agenda</label>
-                          <textarea [(ngModel)]='postagem.agenda' class="form-control" name="agenda" id="agenda" rows="3"></textarea>
+                          <label for="texto">Localização:</label>
+                          <textarea [(ngModel)]='postagem.agenda' class="form-control" name="agenda" id="agenda"
+                          placeholder="Onde está localizado seu local?" rows="3"></textarea>
                         </div>
 
                         <div class="form-group">
-                          <label for="texto">Contato</label>
-                          <textarea [(ngModel)]='postagem.contato' class="form-control" name="contato" id="contato" rows="3"></textarea>
+                          <label for="texto">Contato:</label>
+                          <textarea [(ngModel)]='postagem.contato' class="form-control" name="contato" id="contato"
+                          placeholder="Digite algum site ou telefone para contato!" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="texto">Imagem do Post:</label>
+                          <input [(ngModel)]='postagem.fotoPostagem' class="form-control" name="fotoPostagem" id="fotoPostagem"
+                           placeholder="Uma imagem vale mais que mil palavras!">
                         </div>
 
                         <div class="form-group">

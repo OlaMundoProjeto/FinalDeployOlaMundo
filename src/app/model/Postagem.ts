@@ -9,6 +9,7 @@ export class Postagem {
   public curtidas: number;
   public agenda: String;
   public contato: String;
+  public fotoPostagem: String;
   public tema: Tema;
   public usuario: User;
   public data: Date;
