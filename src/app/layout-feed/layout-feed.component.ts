@@ -22,6 +22,7 @@ export class LayoutFeedComponent implements OnInit {
   foto = environment.foto
   id = environment.id
   usuario = environment.usuario
+  local = environment.local
 
   postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]

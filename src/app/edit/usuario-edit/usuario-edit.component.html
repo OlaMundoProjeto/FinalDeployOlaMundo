@@ -23,6 +23,12 @@
             </div>
 
             <div class="form-group">
+              <label for="usuario">Localização</label>
+              <input [(ngModel)]='usuario.local' class="form-control" type="text" name="local" id="local"
+                placeholder="Sua nova localização">
+            </div>
+
+            <div class="form-group">
               <label for="foto">Link da Foto</label>
               <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="foto" id="foto"
                 placeholder="Link da sua foto">
@@ -45,8 +51,8 @@
               <label for="tipo">Tipo de Usuário</label>
               <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
                 <option>Selecione um tipo de usúario:</option>
-                <option value="normal">Normal</option>
-                <option value="adm">Administrador</option>
+                <option value="normal">Viajante</option>
+                <option value="adm">Comerciante</option>
               </select>
             </div>
 

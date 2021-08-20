@@ -7,6 +7,7 @@ export class Postagem {
   public titulo: String;
   public texto: String;
   public curtidas: number;
+  public local: string;
   public agenda: String;
   public contato: String;
   public fotoPostagem: String;

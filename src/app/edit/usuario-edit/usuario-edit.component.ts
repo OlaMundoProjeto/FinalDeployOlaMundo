@@ -56,6 +56,7 @@ export class UsuarioEditComponent implements OnInit {
         environment.token = ''
         environment.nome = ''
         environment.foto = ''
+        environment.local = ''
         environment.id = 0
         this.router.navigate(['/entrar'])
       });
