@@ -10,17 +10,16 @@
               <div class="card-body d-flex flex-column align-items-center text-center mt-5">
                   <img src="{{foto}}" alt="Admin" class="rounded-circle p-1 " width="110">
                   <div class="mt-3">
-                    <h4>{{nome}}</h4>
+                    <h4>Olá, {{nome}}</h4>
                     <p class="text-secondary mb-1">@{{usuario}}</p>
                     <p class="text-muted font-size-sm">{{local}}</p>
-                    <a [routerLink]="['/usuario-edit', id]" class="btn btn-primary">Editar</a>
-                    <button class="btn btn-light mr-3" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+                    <a [routerLink]="['/usuario-edit', id]" class="btn btn-primary">Editar Perfil</a>
+                    <button class="btn btn-light mr-3" data-toggle="modal" data-target="#novaPostagem">Sugira um lugar incrível:</button>
 
                   </div>
                 </div>
 
                 <hr class="my-4">
-
             </div>
 
 
