@@ -9,7 +9,9 @@ export class QuemsomosComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
+    window.scroll(0,0)
   }
 
 }

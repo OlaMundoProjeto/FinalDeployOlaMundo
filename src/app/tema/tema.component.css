@@ -1,7 +1,68 @@
-#h1{
+#h1 {
   color: black !important;
 }
 
-#h5{
+#h5 {
   color: black !important;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.onda {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #2F9D94, #2F9D94, #2F9D94);
+  background-size: 200%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.form-control {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #999;
+  outline: none;
+}
+
+button#btn-apagar{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  outline: red;
+  border: none;
+  background-image: linear-gradient(to right, red, red, red);
+  background-size: 200%;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: .5s;
 }
