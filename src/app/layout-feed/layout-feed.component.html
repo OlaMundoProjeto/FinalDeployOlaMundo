@@ -11,10 +11,23 @@
               <h4>Olá, {{nome}}</h4>
               <p class="text-secondary mb-1">@{{usuario}}</p>
               <p class="text-muted font-size-sm">{{local}}</p>
-              <a [routerLink]="['/usuario-edit', id]" class="btn btn-primary">Editar Perfil</a>
-              <button class="btn btn-info mr-3" data-toggle="modal" data-target="#novaPostagem">Sugira um lugar
+              <a [routerLink]="['/usuario-edit', id]" class="btn btn-primary mb-1">Editar Perfil</a>
+              <button class="btn btn-info ml-3 mb-1" data-toggle="modal" data-target="#novaPostagem">Sugira um lugar
                 incrível</button>
             </div>
+            <div class="row mt-2">
+              <div class="col-md-12 d-flex justify-content-center mt-3">
+                <div class="input-busca position-relative mb-3">
+                  <input type="text" class="form-control " name="pesquisar" placeholder="Pesquise uma postagem"
+                    [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()' [(ngModel)]='tituloPost'
+                    (keyup)='findByTituloPostagem()'>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="post-input-container mt-3">
+              <textarea rows="3" placeholder="Pesquise aqui uma postagem pelo titulo" [(ngModel)]='tituloPost'
+                (keyup)='findByTituloPostagem()'></textarea>
+            </div> -->
           </div>
         </div>
       </div>

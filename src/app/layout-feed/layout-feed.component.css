@@ -37,6 +37,28 @@
 
 }
 
+.input-busca input {
+  border-radius: 25px;
+  border: rgb(255, 115, 0);
+  background: rgba(46, 46, 46, 0.103);
+  color: #cf8128;
+  width: 100%;
+  margin-right: 15px;
+  padding: 10px;
+  height: 50px;
+  left: 100%;
+}
+
+.input-busca input::placeholder {
+  color: rgb(251, 159, 9);
+}
+
+.input-busca i {
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d69213;
+}
+
 .user-profile img {
   width: 45px;
   border-radius: 50%;
@@ -127,6 +149,7 @@ p {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 18px;
+  color: #da911c;
 }
 .right-sidebar h4{
   font-weight: 600;
@@ -141,6 +164,7 @@ p {
   display: flex;
   font-size: 14px;
   margin-bottom: 20px;
+  color: #1d1d1d;
 }
 .left-event {
   border-radius: 10px;
@@ -153,6 +177,7 @@ p {
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  color: #dd841e;
 }
 
 .right-event{
@@ -171,6 +196,11 @@ p {
   margin-bottom: 20px;
   border-radius: 4px;
 }
+
+.usuarios {
+  color: #1d1d1d;
+}
+
 .usuarios .online img {
   width: 40px;
   border-radius: 50%;
