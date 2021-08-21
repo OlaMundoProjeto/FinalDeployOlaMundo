@@ -34,7 +34,7 @@
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
   width: 24.5%;
-  
+
 
 }
 
@@ -73,6 +73,25 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
+
+/* SEGUNDA NAVBAR ESQUERDA */
+
+/* .nav-second {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  color: #0d8595;
+  background-clip: border-box;
+  border: 0 solid transparent;
+  border-radius: .25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+  width: 24.5%;
+} */
 
 /* POST */
 
@@ -137,7 +156,7 @@ p {
 .right-sidebar {
   right: 0;
   flex-basis: 25%;
-  position: relative;
+  position: absolute;
   top: 17.4%;
   align-self: flex-start;
   background: #fff;

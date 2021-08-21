@@ -1,8 +1,11 @@
 <div class="container-fluid content">
-    <div class="row bg-principal">
+  <div class="row bg-principal">
 
-    <!--Perfil = NAVBAR ESQUERDA -->
-     <div class="col-md-3 main-body m-0">
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@    INICIO CARD PERFIL ESQUERDA    @@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <div class="col-md-3 main-body m-0">
       <div class="row">
         <div class="card">
           <div class="card-body d-flex flex-column align-items-center text-center mt-3">
@@ -24,14 +27,30 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="post-input-container mt-3">
-              <textarea rows="3" placeholder="Pesquise aqui uma postagem pelo titulo" [(ngModel)]='tituloPost'
-                (keyup)='findByTituloPostagem()'></textarea>
-            </div> -->
+          </div>
+        </div>
+      </div>
+    </div> <!-- div final da navbar da esquerda! -->
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@ INICIO SEGUNDA NAVBAR DA ESQUERDA @@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <div class="col-md-5 nav-second m-0">
+      <div class="row2">
+        <div class="card2">
+          <div class="card-body2 d-flex flex-column align-items-center text-center">
+            <div class="mt-5">
+              <h2>Olá, {{nome}}</h2>
+              <a [routerLink]="['/usuario-edit', id]" class="btn btn-primary mb-1">Editar Perfil</a>
+              <button class="btn btn-info ml-3 mb-1" data-toggle="modal" data-target="#novaPostagem">Sugira um lugar
+                incrível</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
 
     <!--pesquisar pelo titulo-->
     <!-- <div class="post-input-container">
@@ -39,7 +58,11 @@
             (keyup)='findByTituloPostagem()'></textarea>
         </div> -->
 
-    <!---post feed-->
+
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@        INICIO POSTAGEM FEED       @@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
     <div class="teste">
       <div class="col-md-6 ml-5 mt-5 post-container justify-content-center position-relative"
@@ -48,11 +71,11 @@
         <div class="post-row perfil-post mb-3 pt-2 pb-2">
           <div class="user-profile">
             <div class="userpostagem d-flex">
-            <img src="{{item.usuario.foto}}">
-            <div class="columns">
-            <p class="p-0 m-0">publicado por: <i>{{item.usuario.nome}}</i></p>
-            <p class="text-muted p-0 m-0">Reside em: {{item.local}}</p>
-            </div>
+              <img src="{{item.usuario.foto}}">
+              <div class="columns">
+                <p class="p-0 m-0">publicado por: <i>{{item.usuario.nome}}</i></p>
+                <p class="text-muted p-0 m-0">Reside em: {{item.local}}</p>
+              </div>
             </div>
             <div>
               <p>Local: {{item.titulo}}</p>
@@ -73,17 +96,28 @@
               </button>
             </div>
           </div>
-                  <!-- @@@@@ EDITAR E APAGAR POSTAGEM @@@@@ -->
-        <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@     EDITAR E APAGAR POSTAGEM      @@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+          <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+          <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
 
         </div>
-    <!-- </div> -->
-  </div>
+      </div>
     </div>
 
+    <!-- ##############################################################
+         ###########               FIM               ##################
+         ###########                DO               ##################
+         ###########               FEED              ##################
+         ############################################################## -->
 
-    <!---navbar do lado direito-->
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@     INICIO NAVBAR DA DIREITA      @@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
     <div class="col-md-3 d-md-block right-sidebar">
 
@@ -162,11 +196,14 @@
       </div>
     </div>
 
-  </div>  <!-- FECHAMENTO DIV SEGUNDA - ROW-->
+  </div> <!-- FECHAMENTO DIV SEGUNDA - ROW-->
 
 
 
-  <!-- Modal das postagens -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@       INICIO MODAL POSTAGEM       @@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
   <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -188,13 +225,13 @@
           <div class="form-group">
             <label for="texto">Texto</label>
             <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto"
-            placeholder="Descreva um pouco sobre o lugar" rows="3"></textarea>
+              placeholder="Descreva um pouco sobre o lugar" rows="3"></textarea>
           </div>
 
           <div class="form-group">
             <label for="fotoPostagem">Foto do Lugar</label>
             <textarea [(ngModel)]='postagem.fotoPostagem' class="form-control" name="fotoPostagem" id="fotoPostagem"
-            placeholder="Uma imagem vale mais que mil palavras!" rows="3"></textarea>
+              placeholder="Uma imagem vale mais que mil palavras!" rows="3"></textarea>
           </div>
 
           <div class="form-group">
@@ -232,5 +269,3 @@
 
 
 </div> <!-- DIV FECHAMENTO DA DIV PRINCIPAL INICIAL -->
-
-
