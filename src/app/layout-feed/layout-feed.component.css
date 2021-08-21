@@ -1,15 +1,25 @@
-.bg-principal {
-  background-color: #b3b6b1;
-  font-family: 'poppins', sans-serif;
+.container-fluid {
+
+  background-color: #282706;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230A66DD'/%3E%3Cstop offset='1' stop-color='%23282706'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%2324FFE5' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%2324FFE5' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.5'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 
 
- /* body {
-  /*background: #f7f7ff; */
-  /*margin:50px; */
+.bg-principal {
+  font-family: 'poppins', sans-serif;
+  display: block;
+  width: 91.7%;
+  padding: 2%;
+  box-sizing: 0 !important;
 
-/* PERFIL */
+}
+
+
+
+/* PERFIL NAVBAR ESQUERDA */
 .card {
   position: fixed;
   display: flex;
@@ -17,16 +27,16 @@
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
+  color: #0d8595;
   background-clip: border-box;
   border: 0 solid transparent;
   border-radius: .25rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
-  width: 450px;
+  width: 24.5%;
+
 }
-.me-2 {
-  margin-right: .5rem!important;
-}
+
 .user-profile img {
   width: 45px;
   border-radius: 50%;
@@ -44,15 +54,28 @@ p {
 /* POST */
 
 .post-container {
-  height: 60%;
-  width: 47%;
+  height: 67%;
+  width: 100%;
   background: radial-gradient(#e8e8e8, #e1e3fc);
   border-radius: 20px;
   padding: 20px;
   color: #1d1d1d;
-  margin: 20px 0;
 
 }
+
+
+.teste {
+  padding-left: 25.5%;
+  width: 100% !important;
+  box-sizing: 0 !important;
+  margin-left: 10%;
+}
+
+
+.perfil-post {
+  border-radius: 3px;
+}
+
 .post-img{
   width: 100%;
   border-radius: 4px;
@@ -86,16 +109,16 @@ p {
 
 /* MENU DIREITO*/
 
-.right-sidebar{
+.right-sidebar {
   right: 0;
   flex-basis: 25%;
-  position: fixed;
-  top: 30px;
+  position: absolute;
+  top: 17.4%;
   align-self: flex-start;
   background: #fff;
   padding:20px;
-  border-radius: 4px;
-  color:#626262;
+  border-radius: 3px;
+  color:#dd841e;
   box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
 
 }
