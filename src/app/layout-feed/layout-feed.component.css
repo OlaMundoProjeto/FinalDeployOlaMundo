@@ -34,6 +34,7 @@
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
   width: 24.5%;
+  
 
 }
 
@@ -83,6 +84,7 @@ p {
   padding: 20px;
   color: #1d1d1d;
 
+
 }
 
 
@@ -130,11 +132,12 @@ p {
 }
 
 /* MENU DIREITO*/
+/* POSITION: ABSOLUTE/FIXED = LADO DIREITO, PORÉM EM CIMA DO FOOTER. RELATIVE = RESPEITA O FOOTER MAS NÃO FICA DO LADO DIREITO. */
 
 .right-sidebar {
   right: 0;
   flex-basis: 25%;
-  position: absolute;
+  position: relative;
   top: 17.4%;
   align-self: flex-start;
   background: #fff;
