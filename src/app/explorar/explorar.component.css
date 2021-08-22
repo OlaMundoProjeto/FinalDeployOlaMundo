@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Spartan', sans-serif;
-  color: rgb(233, 115, 47);
+ 
 }
 
 body {
@@ -13,19 +13,18 @@ body {
   background: #084750;
 }
 
-.container {
+.conteudo {
 position: relative;
-width: 1100px;
+width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
-padding: 200px;
+
 }
 
 
-.container .card {
-
+.conteudo .card {
   position: relative;
   max-width: 500px;
   height: 300px;
@@ -37,30 +36,30 @@ padding: 200px;
   transition: 0.7s ease-in-out;
 }
 
-.container .card:hover {
+.conteudo .card:hover {
   height: 450px;
+  width: 100%;
 }
 
-.container .card .imgBox {
+.conteudo .card .imgBox {
   position: relative;
-  width: 260px;
+  width: 260px; 
   height: 260px;
-  top: -40px;
-  left: 10px;
+  top: -15px;
+  left: 0px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 
 }
 
-.container .card .imgBox img {
-  max-width: 100%;
-  border-radius: 8px;
-}
 
-.container .card .content {
+
+.conteudo .card .content {
   position: relative;
+  right: 220px;
   margin-top: -120px;
   padding: 50px 45px;
   text-align: center;
+  min-width: 400px;
   color: rgb(182, 27, 27);
   visibility: hidden;
   opacity: 0;
@@ -68,39 +67,35 @@ padding: 200px;
 
 }
 
-.container .card:hover .content {
+.conteudo .card:hover .content {
   visibility: visible;
   opacity: 1;
   margin-top: -20px;
+  width: 400px;
   transition-delay: 0.3s;
 }
 
-.carousel-inner {
-
-  margin: 5px;
-  display: flex;
-  flex-direction: row;
-  box-shadow: 0 5px 120px rgba(42, 150, 132, 0.808);
-  transition: 0.7s ease-in-out;
-}
 
 .carousel-inner .item
 {
   box-shadow: 0 5px 80px rgba(0, 0, 0, 0.808);
 }
 
-#h2 {
+h2 {
   margin: 0;
   padding: 5px;
   font-size: 30px;
-  color: rgb(255, 145, 0);
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 2px black;
 }
 
-#h2 .li {
+h2 .li {
   margin: 5px;
+  font-weight: bold;
   padding: 5px;
   font-size: 30px;
-  color: rgb(255, 145, 0);
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 2px black;
 
 }
-
