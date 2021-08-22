@@ -46,7 +46,7 @@ export class LayoutFeedComponent implements OnInit {
     private postagemService: PostagemService,
     private temaService: TemaService,
     private authService: AuthService,
-    private alerta: AlertaService
+    private alerta: AlertaService,
 
   ) { }
 

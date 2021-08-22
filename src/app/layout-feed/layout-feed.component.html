@@ -254,11 +254,11 @@
     <!-- Fim do card perfil -->
 
     <!-- inicio do feed -->
-    
-    <div class="col-md-6 flex-column borda mt-5" 
+
+    <div class="col-md-6 flex-column borda mt-5"
       >
 
-    
+
       <div class="post-row perfil-post mb-3 pt-2 pb-2 borda" *ngFor='let item of listaPostagem | orderBy: key: reverse'>
         <div class="user-profile">
           <div class="userpostagem d-flex">
@@ -274,6 +274,7 @@
           </div>
         </div>
         <p class="post-text">Sobre o lugar: {{item.texto}}</p>
+        <p class = "" > {{item.data | date: 'dd / MM / aaaa'}} às {{item.data | date: 'HH: mm'}} </p>
         <!-- @@@@@@@@@@@@ LEMBRAR DE PERGUNTAR PRO PROFESSOR COMO POR FOTO NO POST ATRAVÉS DE UPLOAD/LINK -->
         <img src="{{item.fotoPostagem}}" class="post-img">
         <div class="post-row">
@@ -447,7 +448,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Publicar</button>
       </div>
     </div>
   </div>

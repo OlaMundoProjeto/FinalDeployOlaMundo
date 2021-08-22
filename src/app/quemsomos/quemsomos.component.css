@@ -1,3 +1,7 @@
+.borda{
+  border: solid 1px red;
+}
+
 .bg-principal {
   background-color: rgb(216, 216, 236);
 }
@@ -118,13 +122,13 @@ h3.h3-edit {
   display: flex;
   justify-content: center;
   margin-top: 15px;
-  padding-left: 150px;
 }
 
 .video{
   display:table-column;
   align-items: center;
   justify-content: center;
+  margin-left: 85px;
 }
 
 .pb-5 {
