@@ -37,7 +37,7 @@ export class LayoutFeedComponent implements OnInit {
   user: User = new User()
   idUser = environment.id
 
-  key = 'data'
+  key = 'date'
   reverse = true
   // reverse geralmente é false - ordem fica do primeiro postado pro ultimo, deixamos true pois com postagens precisamos da exibição do ultimo para o primeiro
 
@@ -179,6 +179,7 @@ export class LayoutFeedComponent implements OnInit {
       this.getAllPostagens()
     })
   }
+  
   getPostagemById(id: number){
     this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem)=>{
       this.postagem = resp

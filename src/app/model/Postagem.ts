@@ -4,13 +4,12 @@ import { User } from "./User"
 
 export class Postagem {
   public id: number;
-  public titulo: String;
-  public texto: String;
+  public titulo: string;
+  public texto: string;
   public curtidas: number;
-  public local: string;
-  public agenda: String;
-  public contato: String;
-  public fotoPostagem: String;
+  public agenda: string;
+  public contato: string;
+  public fotoPostagem: string;
   public tema: Tema;
   public usuario: User;
   public data: Date;

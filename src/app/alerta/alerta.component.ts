@@ -15,10 +15,10 @@ export class AlertaComponent implements OnInit {
     public modal: BsModalRef
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
   onClose(){
-    this.modal.hide()
+    this.modal.hide
   }
 }

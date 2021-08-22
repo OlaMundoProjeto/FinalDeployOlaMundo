@@ -69,7 +69,7 @@
 .user-profile img {
   width: 45px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 p {
@@ -122,12 +122,14 @@ p {
   /* width: 100% !important; */
   box-sizing: 0 !important;
   margin-left: 15%;
-  
+  background-color: blueviolet !important;
+
 }
 
 
 .perfil-post {
   border-radius: 3px;
+
 }
 
 .post-img {
