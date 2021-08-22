@@ -28,6 +28,7 @@ export class TemaComponent implements OnInit {
 
 
     this.findAllTemas()
+    
   }
 
 
@@ -37,6 +38,8 @@ export class TemaComponent implements OnInit {
       this.listaTemas = resp
     })
   }
+
+
 
   cadastrar(){
     this.temaService.postTema(this.tema).subscribe((resp: Tema) =>{

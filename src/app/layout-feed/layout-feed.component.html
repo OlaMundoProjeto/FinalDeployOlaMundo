@@ -1,42 +1,45 @@
-<div class="container-fluid content">
-  <div class="row bg-principal">
+<!-- <div class="container-fluid content borda "> -->
+<!-- <div class="row bg-principal d-flex "> -->
+<!-- <div class="d-flex flex-row bd-highlight mb-3"> -->
 
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
          @@@@@@@@@@@@@@@@@@    INICIO CARD PERFIL ESQUERDA    @@@@@@@@@@@@@@@@@@
          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-    <div class="col-md-3 main-body m-0">
-      <div class="row">
-        <div class="card">
-          <div class="card-body d-flex flex-column align-items-center text-center mt-3">
-            <img src="{{foto}}" alt="Admin" class="rounded-circle p-1 " width="110">
-            <div class="mt-3">
-              <h4>Olá, {{nome}}</h4>
-              <p class="text-secondary mb-1">@{{usuario}}</p>
-              <p class="text-muted font-size-sm">{{local}}</p>
-              <a [routerLink]="['/usuario-edit', id]" class="btn btn-primary mb-1">Editar Perfil</a>
-              <button class="btn btn-info ml-3 mb-1" data-toggle="modal" data-target="#novaPostagem">Sugira um lugar
-                incrível</button>
-            </div>
-            <div class="row mt-2">
-              <div class="col-md-12 d-flex justify-content-center mt-3">
-                <div class="input-busca position-relative mb-3">
-                  <input type="text" class="form-control " name="pesquisar" placeholder="Pesquise uma postagem"
-                    [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()' [(ngModel)]='tituloPost'
-                    (keyup)='findByTituloPostagem()'>
+<!-- <div class="p-2 bd-highlight">
+      <div class="col-md-3 main-body m-0 borda">
+        <div class="row">
+          <div class="card">
+            <div class="card-body d-flex flex-column align-items-center text-center mt-3">
+              <img src="{{foto}}" alt="Admin" class="rounded-circle p-1 " width="110">
+              <div class="mt-3">
+                <h4>Olá, {{nome}}</h4>
+                <p class="text-secondary mb-1">@{{usuario}}</p>
+                <p class="text-muted font-size-sm">{{local}}</p>
+                <a [routerLink]="['/usuario-edit', id]" class="btn btn-primary mb-1">Editar Perfil</a>
+                <button class="btn btn-info ml-3 mb-1" data-toggle="modal" data-target="#novaPostagem">Sugira um lugar
+                  incrível</button>
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-12 d-flex justify-content-center mt-3">
+                  <div class="input-busca position-relative mb-3">
+                    <input type="text" class="form-control " name="pesquisar" placeholder="Pesquise uma postagem"
+                      [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()' [(ngModel)]='tituloPost'
+                      (keyup)='findByTituloPostagem()'>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div> <!-- div final da navbar da esquerda! -->
+        </div> -->
+<!-- </div> div final da navbar da esquerda! -->
+<!-- </div> -->
 
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
          @@@@@@@@@@@@@@@@@@ INICIO SEGUNDA NAVBAR DA ESQUERDA @@@@@@@@@@@@@@@@@@
          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-    <div class="col-md-5 nav-second m-0">
+<!-- <div class="col-md-5 nav-second m-0">
       <div class="row2">
         <div class="card2">
           <div class="card-body2 d-flex flex-column align-items-center text-center">
@@ -49,77 +52,77 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
-    <!--pesquisar pelo titulo-->
-    <!-- <div class="post-input-container">
+<!--pesquisar pelo titulo-->
+<!-- <div class="post-input-container">
           <textarea rows="3" placeholder="Pesquise aqui uma postagem pelo titulo" [(ngModel)]='tituloPost'
             (keyup)='findByTituloPostagem()'></textarea>
         </div> -->
 
 
 
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
          @@@@@@@@@@@@@@@@@@        INICIO POSTAGEM FEED       @@@@@@@@@@@@@@@@@@
          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- <div class="p-2 bd-highlight">
+      <div class="teste borda">
+        <div class="col-md-6 ml-5 mt-5 post-container justify-content-center borda"
+          *ngFor='let item of listaPostagem | orderBy: key: reverse'>
 
-    <div class="teste">
-      <div class="col-md-6 ml-5 mt-5 post-container justify-content-center position-relative"
-        *ngFor='let item of listaPostagem | orderBy: key: reverse'>
-
-        <div class="post-row perfil-post mb-3 pt-2 pb-2">
-          <div class="user-profile">
-            <div class="userpostagem d-flex">
-              <img src="{{item.usuario.foto}}">
-              <div class="columns">
-                <p class="p-0 m-0">publicado por: <i>{{item.usuario.nome}}</i></p>
-                <p class="text-muted p-0 m-0">Reside em: {{item.local}}</p>
+          <div class="post-row perfil-post mb-3 pt-2 pb-2 borda">
+            <div class="user-profile">
+              <div class="userpostagem d-flex">
+                <img src="{{item.usuario.foto}}">
+                <div class="columns">
+                  <p class="p-0 m-0">publicado por: <i>{{item.usuario.nome}}</i></p>
+                  <p class="text-muted p-0 m-0">Reside em: {{item.local}}</p>
+                </div>
+              </div>
+              <div>
+                <p>Local: {{item.titulo}}</p>
+                <p><small class="text-muted">Tipo de ambiente: {{item.tema.ambientacao}}</small></p>
               </div>
             </div>
-            <div>
-              <p>Local: {{item.titulo}}</p>
-              <p><small class="text-muted">Tipo de ambiente: {{item.tema.ambientacao}}</small></p>
-            </div>
-          </div>
-          <p class="post-text">Sobre o lugar: {{item.texto}}</p>
-          <!-- @@@@@@@@@@@@ LEMBRAR DE PERGUNTAR PRO PROFESSOR COMO POR FOTO NO POST ATRAVÉS DE UPLOAD/LINK -->
-          <img src="{{item.fotoPostagem}}" class="post-img">
-          <div class="post-row">
-            <div class="activity-icons">
-              <button class="btn" (click)='getPostagemById(item.id)' (click)='descurtida(item.id)'>
-                <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-              </button>
-              Curtidas: {{ item.curtidas }}
-              <button class="btn" (click)='getPostagemById(item.id)' (click)='curtida(item.id)'>
-                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-              </button>
-            </div>
-          </div>
+            <p class="post-text">Sobre o lugar: {{item.texto}}</p> -->
+<!-- @@@@@@@@@@@@ LEMBRAR DE PERGUNTAR PRO PROFESSOR COMO POR FOTO NO POST ATRAVÉS DE UPLOAD/LINK -->
+<!-- <img src="{{item.fotoPostagem}}" class="post-img">
+            <div class="post-row">
+              <div class="activity-icons">
+                <button class="btn" (click)='getPostagemById(item.id)' (click)='descurtida(item.id)'>
+                  <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                </button>
+                Curtidas: {{ item.curtidas }}
+                <button class="btn" (click)='getPostagemById(item.id)' (click)='curtida(item.id)'>
+                  <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div> -->
 
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
          @@@@@@@@@@@@@@@@@@     EDITAR E APAGAR POSTAGEM      @@@@@@@@@@@@@@@@@@
          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-          <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-          <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+<!-- <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+            <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
 
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- ##############################################################
+    </div> -->
+<!-- ##############################################################
          ###########               FIM               ##################
          ###########                DO               ##################
          ###########               FEED              ##################
          ############################################################## -->
 
 
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
          @@@@@@@@@@@@@@@@@@     INICIO NAVBAR DA DIREITA      @@@@@@@@@@@@@@@@@@
          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-    <div class="col-md-3 d-md-block right-sidebar">
+<!-- <div class="col-md-3 d-md-block right-sidebar borda">
 
       <div class="row menu-direito justify-content-between">
 
@@ -194,78 +197,264 @@
         </div>
         <p>Raquel Santos Alberto</p>
       </div>
-    </div>
+    </div> -->
 
-  </div> <!-- FECHAMENTO DIV SEGUNDA - ROW-->
+<!-- </div>  FECHAMENTO DIV SEGUNDA - ROW-->
+<!-- </div>  -->
 
 
 
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-         @@@@@@@@@@@@@@@@@@       INICIO MODAL POSTAGEM       @@@@@@@@@@@@@@@@@@
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@       Postagem    @@@@@@@@@@@@@@@@@@
          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-  <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
+<div class="container borda">
+
+  <div class="row d-flex borda">
+
+    <!-- inicio do card perfil -->
+    <div class="col-md-3 borda">
+
+      <div class="card mt-5">
+        <div class="card-body d-flex flex-column align-items-center text-center mt-3">
+          <img src="{{foto}}" alt="Admin" class="rounded-circle p-1 " width="110">
+          <div class="mt-3">
+            <h4>Olá, {{nome}}</h4>
+            <p class="text-secondary mb-1">@{{usuario}}</p>
+            <p class="text-muted font-size-sm">{{local}}</p>
+            <a [routerLink]="['/usuario-edit', id]" class="btn btn-primary mb-1">Editar Perfil</a>
+            <button class="btn btn-info ml-3 mr-3 mb-1" data-toggle="modal" data-target="#novaPostagem">Sugira um lugar
+              incrível</button>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-12 d-flex justify-content-center mt-3">
+              <div class="input-busca position-relative mb-3">
+                <input type="text" class="form-control " name="pesquisar" placeholder="Pesquise uma postagem"
+                  [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()' [(ngModel)]='tituloPost'
+                  (keyup)='findByTituloPostagem()'>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="modal-body">
+      </div>
 
-          <div class="form-group">
-            <label for="titulo">Título</label>
-            <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
-              placeholder="Digite o título da nova postagem">
+    </div>
+    <!-- Fim do card perfil -->
+
+    <!-- inicio do feed -->
+    
+    <div class="col-md-6 flex-column borda mt-5" 
+      >
+
+    
+      <div class="post-row perfil-post mb-3 pt-2 pb-2 borda" *ngFor='let item of listaPostagem | orderBy: key: reverse'>
+        <div class="user-profile">
+          <div class="userpostagem d-flex">
+            <img src="{{item.usuario.foto}}">
+            <div class="columns">
+              <p class="p-0 m-0">publicado por: <i>{{item.usuario.nome}}</i></p>
+              <p class="text-muted p-0 m-0">Reside em: {{item.local}}</p>
+            </div>
           </div>
-
-          <div class="form-group">
-            <label for="texto">Texto</label>
-            <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto"
-              placeholder="Descreva um pouco sobre o lugar" rows="3"></textarea>
+          <div>
+            <p>Local: {{item.titulo}}</p>
+            <p><small class="text-muted">Tipo de ambiente: {{item.tema.ambientacao}}</small></p>
           </div>
-
-          <div class="form-group">
-            <label for="fotoPostagem">Foto do Lugar</label>
-            <textarea [(ngModel)]='postagem.fotoPostagem' class="form-control" name="fotoPostagem" id="fotoPostagem"
-              placeholder="Uma imagem vale mais que mil palavras!" rows="3"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="texto">Localização</label>
-            <textarea [(ngModel)]='postagem.agenda' class="form-control" name="endereco" id="endereco"
-              placeholder="Digite o endereço do lugar" rows="3"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="texto">Contato</label>
-            <textarea [(ngModel)]='postagem.contato' class="form-control" name="contato" id="contato"
-              placeholder="Digite um site ou telefone para contato do lugar" rows="3"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>:
-            </label>
-            <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-              <option *ngFor='let item of listaTemas' value="{{item.id}}">
-                {{item.temaPostagem}}</option>
-            </select>
-          </div>
-
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
+        <p class="post-text">Sobre o lugar: {{item.texto}}</p>
+        <!-- @@@@@@@@@@@@ LEMBRAR DE PERGUNTAR PRO PROFESSOR COMO POR FOTO NO POST ATRAVÉS DE UPLOAD/LINK -->
+        <img src="{{item.fotoPostagem}}" class="post-img">
+        <div class="post-row">
+          <div class="activity-icons">
+            <button class="btn" (click)='getPostagemById(item.id)' (click)='descurtida(item.id)'>
+              <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+            </button>
+            Curtidas: {{ item.curtidas }}
+            <button class="btn" (click)='getPostagemById(item.id)' (click)='curtida(item.id)'>
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
+
+        <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+
+      </div>
+    </div>
+    <!-- final do feed -->
+
+
+    <!-- menu direita -->
+    <div class="col-md-3 d-md-block right-sidebar borda menu-direito">
+
+      <div class="sidebar-title">
+        <h4>Lugares perto de você</h4>
+        <a href="#">Veja Tudo</a>
+      </div>
+      <div class="event">
+        <div class="left-event">
+          <h3>SP</h3>
+          <span></span>
+        </div>
+        <div class="right-event">
+          <h4>Praia Grande</h4>
+          <p>
+            <i class="fa fa-map-marker"></i>
+            Baixada Santista
+          </p>
+          <a href="#">Mais informações</a>
+        </div>
+      </div>
+      <div class="event">
+        <div class="left-event">
+          <h3>SP</h3>
+          <span></span>
+        </div>
+        <div class="right-event">
+          <h4>Bar do Vodka</h4>
+          <p>
+            <i class="fa fa-map-marker"></i>
+            Perto daqui po
+          </p>
+          <a href="#">Mais informações</a>
+        </div>
+      </div>
+
+      <div class="sidebar-title">
+        <h4>Explorar</h4>
+        <a routerLink="/explorar">Mais Informações</a>
+      </div>
+      <img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2020/10/feriado-prolongado-2021-dicas.jpg"
+        class="explorar">
+
+      <div class="sidebar-title">
+        <h4>Usuarios recorrentes</h4>
+        <a href="#">Entre em contato</a>
+      </div>
+      <div class="usuarios">
+        <div class="online">
+          <img src="https://fhox.com.br/wp-content/uploads/2019/02/ia_fotos_0004_screenshot_19-150x150.jpg">
+        </div>
+        <p>Pedro Oliveira</p>
+      </div>
+      <div class="usuarios">
+        <div class="online">
+          <img src="https://www.colegiocognos.com.br/wp-content/uploads/2020/08/essa-pessoa-nao-existe.jpeg">
+        </div>
+        <p>Rita da Silva</p>
+      </div>
+
+      <div class="usuarios">
+        <div class="online">
+          <img
+            src="https://i2.wp.com/www.desvirtual.com/web_nova/wp-content/uploads/2021/03/fig_02_person-1.jpg?fit=1024%2C1024">
+        </div>
+        <p>Simone dos Santos</p>
+      </div>
+      <div class="usuarios">
+        <div class="online">
+          <img src="https://ichi.pro/assets/images/max/724/1*fNLMb7DHUQfn18w8YvyLQA.png">
+        </div>
+        <p>Raquel Santos Alberto</p>
       </div>
     </div>
 
 
-  </div> <!-- DIV FECHAMENTO MODAL! -->
+
+  </div>
+
+</div>
 
 
 
-</div> <!-- DIV FECHAMENTO DA DIV PRINCIPAL INICIAL -->
+
+
+
+
+
+
+
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@       INICIO MODAL POSTAGEM       @@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+<div class="modal fade modal-edit" id="novaPostagem" tabindex="-1" role="dialog"
+  aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input class="form-control" [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
+            placeholder="Digite o título da nova postagem">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea class="form-control" [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto"
+            placeholder="Descreva um pouco sobre o lugar" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="fotoPostagem">Foto do Lugar</label>
+          <textarea class="form-control" [(ngModel)]='postagem.fotoPostagem' class="form-control" name="fotoPostagem"
+            id="fotoPostagem" placeholder="Uma imagem vale mais que mil palavras!" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Localização</label>
+          <textarea class="form-control" [(ngModel)]='postagem.agenda' class="form-control" name="endereco"
+            id="endereco" placeholder="Digite o endereço do lugar" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Contato</label>
+          <textarea class="form-control" [(ngModel)]='postagem.contato' class="form-control" name="contato" id="contato"
+            placeholder="Digite um site ou telefone para contato do lugar" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>:
+          </label>
+          <select class="form-control" name="tema" id="tema" class="form-control" [(ngModel)]='idTema'
+            (change)='findByIdTema()'>
+            <option *ngFor='let item of listaTemas' value="{{item.id}}">
+              {{item.temaPostagem}}</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
+      </div>
+    </div>
+  </div>
+
+
+</div> <!-- DIV FECHAMENTO MODAL! -->
+
+
+
+<!-- DIV FECHAMENTO DA DIV PRINCIPAL INICIAL -->
