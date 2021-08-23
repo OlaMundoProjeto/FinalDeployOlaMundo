@@ -46,17 +46,17 @@
           <div class="userpostagem d-flex ml-2">
             <img src="{{item.usuario.foto}}">
             <div class="columns">
-              <p class="p-0 m-0">publicado por: <i>{{item.usuario.nome}}</i></p>
+              <p class="p-0 m-0">por: <i>{{item.usuario.nome}}</i></p>
               <p class="text-muted p-0 m-0">Reside em: {{item.usuario.local}}</p>
-              <p class="text-muted p-0 m-0">Publicado dia: {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} </p>
+              <p class="text-muted p-0 m-0">Publicado dia: <i>{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} </i></p>
             </div>
           </div>
           <div>
-            <p class="ml-2">Local: {{item.titulo}}</p>
-            <p class="text-muted ml-2">Tipo de ambiente: {{item.tema.ambientacao}}</p>
+            <p class="ml-2"><b>Local:</b> {{item.titulo}}</p>
+            <p class="ml-2"><b>Tipo de ambiente:</b> {{item.tema.ambientacao}}</p>
           </div>
         </div>
-        <p class="post-text ml-2">Sobre o lugar: {{item.texto}}</p>
+        <p class="ml-2"><b>Sobre o lugar:</b> {{item.texto}}</p>
         <img src="{{item.fotoPostagem}}" class="post-img" height="660">
         <div class="post-row">
           <div class="activity-icons">

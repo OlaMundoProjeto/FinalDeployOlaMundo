@@ -1,6 +1,6 @@
 .container-borda {
 
-  background-color: #282706;
+  background-color: #0e899e;
   background-attachment: fixed;
   background-size: cover;
 
@@ -43,11 +43,10 @@
 .input-busca input {
   border-radius: 25px;
   border: rgb(255, 115, 0);
-  background: rgba(46, 46, 46, 0.103);
+  background: rgba(53, 52, 52, 0.203);
   color: #cf8128;
   width: 100%;
-  margin-right: 15px;
-  padding: 10px;
+  padding: 25px;
   height: 50px;
   left: 100%;
 }
@@ -121,7 +120,7 @@ p {
 
 
 .perfil-post {
-  background-color: #9a9a9a;
+  background-color: #88bad1;
   border-radius: 3px;
 }
 
@@ -132,21 +131,21 @@ p {
   padding: 7.5px;
 }
 
-.post-text {
+/* .post-text {
   color: #626262;
   margin: 15px 0;
   font-size: 15px;
-}
+} */
 
-.post-text span {
+/* .post-text span {
   color: #626262;
   font-weight: 500;
-}
+} */
 
-.post-text a {
+/* .post-text a {
   color: #1876f2;
   text-decoration: none;
-}
+} */
 
 .post-profile-icon {
   display: flex;
