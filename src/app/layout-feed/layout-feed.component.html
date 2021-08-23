@@ -28,6 +28,7 @@
               </div>
             </div>
           </div>
+          
         </div>
       </div>
 
@@ -46,11 +47,25 @@
           <div class="userpostagem d-flex ml-2">
             <img src="{{item.usuario.foto}}">
             <div class="columns">
+
               <p class="p-0 m-0">por: <i>{{item.usuario.nome}}</i></p>
               <p class="text-muted p-0 m-0">Reside em: {{item.usuario.local}}</p>
               <p class="text-muted p-0 m-0">Publicado dia: <i>{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} </i></p>
             </div>
+            
           </div>
+            
+            <div class="feed-icon px-2 social-action dropdown pull-right"
+              *ngIf=' item.usuario.id == id'>
+              <button data-toggle="dropdown" class=" btn bgroxoclaro btn-lg  ">
+                <i class="fa fa-ellipsis-v text-black-50"></i>
+              </button>
+              <ul class="dropdown-menu m-t-xs">
+                <li><a [routerLink]="['/produto-edit',item.id]" class="text-info me-3" href="">Editar</a></li>
+                <li><a [routerLink]="['/produto-delete',item.id]" class="text-danger" href="">Apagar</a></li>
+              </ul>
+            </div>
+         
           <div>
             <p class="ml-2"><b>Local:</b> {{item.titulo}}</p>
             <p class="ml-2"><b>Tipo de ambiente:</b> {{item.tema.ambientacao}}</p>
@@ -70,8 +85,10 @@
           </div>
         </div>
 
-        <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3 ml-2" href="">Editar</a>
-        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+
+
+        <!-- <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3 ml-2" href="">Editar</a> -->
+        <!-- <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a> -->
 
       </div>
     </div>
