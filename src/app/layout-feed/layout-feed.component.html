@@ -12,7 +12,7 @@
         <div class="card-body d-flex flex-column align-items-center text-center mt-3">
           <img src="{{foto}}" alt="Admin" class="rounded-circle p-1 " width="110">
           <div class="mt-3">
-            <h4>Olá, {{nome}}</h4>
+            <h4> {{nome}}</h4>
             <p class="text-secondary mb-1">@{{usuario}}</p>
             <p class="text-muted font-size-sm">De: {{local}}</p>
             <a [routerLink]="['/usuario-edit', id]" class="btn btn-success mb-1">Editar Perfil</a>
@@ -27,6 +27,25 @@
                   (keyup)='findByTituloPostagem()'>
               </div>
             </div>
+          </div>
+          <div class="shortcut-links">
+            <p>Noticias de SP</p>
+            <a href="https://www.google.com/search?client=opera&q=eventos+em+sp&sourceid=opera&ie=UTF-8&oe=UTF-8&ibp=htl;events&rciv=evn&sxsrf=ALeKk033QwOiMGF6_nflwIoGlNdVocL6XA:1629738916813#htivrt=events&htidocid=L2F1dGhvcml0eS9ob3Jpem9uL2NsdXN0ZXJlZF9ldmVudC8yMDIxLTA0LTMwfF8xMDE1MTYxNDYyOTU5ODg3MDkwNQ%3D%3D&fpstate=tldetail">
+              <img src="../../assets/icons/shortcut-1.png">
+              Agenda & Noticias
+            </a>
+            <a href="#">
+              <img src="../../assets/icons/shortcut-2.png">
+              Eventos
+            </a>
+            <a href="#">
+              <img src="../../assets/icons/shortcut-3.png">
+              Ministério do Turismo
+            </a>
+            <a href="https://www.gov.br/saude/pt-br/coronavirus/como-se-proteger">
+              <img src="../../assets/icons/shortcut-4.png">
+              Alerta COVID-19
+            </a>
           </div>
           
         </div>
@@ -48,7 +67,7 @@
             <img src="{{item.usuario.foto}}">
             <div class="columns">
 
-              <p class="p-0 m-0">por: <i>{{item.usuario.nome}}</i></p>
+              <p class="p-0 m-0"> <i>{{item.usuario.nome}}</i></p>
               <p class="text-muted p-0 m-0">Reside em: {{item.usuario.local}}</p>
               <p class="text-muted p-0 m-0">Publicado dia: <i>{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} </i></p>
             </div>
@@ -60,35 +79,35 @@
               <button data-toggle="dropdown" class=" btn bgroxoclaro btn-lg  ">
                 <i class="fa fa-ellipsis-v text-black-50"></i>
               </button>
-              <ul class="dropdown-menu m-t-xs">
-                <li><a [routerLink]="['/produto-edit',item.id]" class="text-info me-3" href="">Editar</a></li>
-                <li><a [routerLink]="['/produto-delete',item.id]" class="text-danger" href="">Apagar</a></li>
-              </ul>
+            
             </div>
          
           <div>
+            <p class="ml-2"><b>Temática:</b> {{item.tema.temaPostagem}}</p>
             <p class="ml-2"><b>Local:</b> {{item.titulo}}</p>
+            <p class="ml-2"><b>Localizado em:</b> {{item.agenda}}</p>
+
             <p class="ml-2"><b>Tipo de ambiente:</b> {{item.tema.ambientacao}}</p>
           </div>
         </div>
         <p class="ml-2"><b>Sobre o lugar:</b> {{item.texto}}</p>
         <img src="{{item.fotoPostagem}}" class="post-img" height="460">
         <div class="post-row">
-          <div class="activity-icons">
+          <div class="activity-icons text-center">
             <button class="btn" (click)='getPostagemById(item.id)' (click)='descurtida(item.id)'>
-              <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+            <img src="../../assets/icons/dislike.png">
             </button>
-            <b>Curtidas:</b> {{ item.curtidas }}
+            <b></b> {{ item.curtidas }}
             <button class="btn" (click)='getPostagemById(item.id)' (click)='curtida(item.id)'>
-              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+              <img src="../../assets/icons/like (2).png">
             </button>
           </div>
         </div>
 
 
 
-        <!-- <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3 ml-2" href="">Editar</a> -->
-        <!-- <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a> -->
+        <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3 ml-2" href="">Editar</a> 
+        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a> 
 
       </div>
     </div>
