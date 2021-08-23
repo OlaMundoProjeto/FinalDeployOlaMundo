@@ -43,8 +43,8 @@
 .input-busca input {
   border-radius: 25px;
   border: rgb(255, 115, 0);
-  background: rgba(53, 52, 52, 0.203);
-  color: #cf8128;
+  background: #e6823b;
+  color: #fffffffd;
   width: 100%;
   padding: 25px;
   height: 50px;
@@ -52,13 +52,15 @@
 }
 
 .input-busca input::placeholder {
-  color: rgb(251, 159, 9);
+  color: rgb(255, 255, 255);
+  font-size: 100%;
 }
 
 .input-busca i {
   top: 50%;
   transform: translateY(-50%);
   color: #d69213;
+
 }
 
 .user-profile img {

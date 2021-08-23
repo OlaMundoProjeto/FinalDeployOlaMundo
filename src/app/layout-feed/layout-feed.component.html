@@ -15,7 +15,7 @@
             <h4>Olá, {{nome}}</h4>
             <p class="text-secondary mb-1">@{{usuario}}</p>
             <p class="text-muted font-size-sm">De: {{local}}</p>
-            <a [routerLink]="['/usuario-edit', id]" class="btn btn-primary mb-1">Editar Perfil</a>
+            <a [routerLink]="['/usuario-edit', id]" class="btn btn-success mb-1">Editar Perfil</a>
             <button class="btn btn-info ml-3 mr-3 mb-1" data-toggle="modal" data-target="#novaPostagem">Sugira um lugar
               incrível</button>
           </div>
@@ -57,7 +57,7 @@
           </div>
         </div>
         <p class="ml-2"><b>Sobre o lugar:</b> {{item.texto}}</p>
-        <img src="{{item.fotoPostagem}}" class="post-img" height="660">
+        <img src="{{item.fotoPostagem}}" class="post-img" height="460">
         <div class="post-row">
           <div class="activity-icons">
             <button class="btn" (click)='getPostagemById(item.id)' (click)='descurtida(item.id)'>
