@@ -1,0 +1,30 @@
+.coisa {
+
+  height: 350px;
+  padding-top: 650px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+ }
+
+ .onda1{
+	position: fixed;
+	bottom: -1;
+	left: 0;
+}
+h1 {
+  font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+  font-size: 28px;
+
+ }
+ .form-control{
+   border-radius: 20px;
+   padding: 10px;
+   margin: 10px 0;
+   width: 100%;
+   border: 1px solid #999;
+  outline: none;
+ }
