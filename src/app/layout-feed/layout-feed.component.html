@@ -1,0 +1,266 @@
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            @@@@@@@@@@@@@@@@@@       Postagem    @@@@@@@@@@@@@@@@@@
+     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+<div class="container-borda">
+  <div class="row d-flex borda m-0">
+
+    <!-- inicio do card perfil -->
+    <div class="col-md-3 borda p-0">
+
+      <div class="card mt-5">
+        <div class="card-body d-flex flex-column align-items-center text-center mt-3">
+          <img src="{{foto}}" alt="Admin" class="rounded-circle p-1 " width="110">
+          <div class="mt-3">
+            <h4> {{nome}}</h4>
+            <p class="text-secondary mb-1">@{{usuario}}</p>
+            <p class="text-muted font-size-sm">De: {{local}}</p>
+            <a [routerLink]="['/usuario-edit', id]" class="btn btn-success mb-1 btn-editperfil">Editar Perfil</a>
+            <button class="btn btn-info ml-3 mr-3 mb-1" data-toggle="modal" data-target="#novaPostagem">Sugira um lugar
+              incrível</button>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-12 d-flex justify-content-center mt-3">
+              <div class="input-busca position-relative mb-3">
+                <input type="text" class="form-control " name="pesquisar" placeholder="Pesquise uma postagem"
+                  [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()' [(ngModel)]='tituloPost'
+                  (keyup)='findByTituloPostagem()'>
+              </div>
+            </div>
+          </div>
+          <div class="shortcut-links">
+            <p>Noticias de SP</p>
+            <a
+              href="https://www.google.com/search?client=opera&q=NOTICIAS+SP&sourceid=opera&ie=UTF-8&oe=UTF-8&ibp=htl;events&rciv=evn&sxsrf=ALeKk033QwOiMGF6_nflwIoGlNdVocL6XA:1629738916813#fpstate=tldetail&htivrt=events&htidocid=L2F1dGhvcml0eS9ob3Jpem9uL2NsdXN0ZXJlZF9ldmVudC8yMDIxLTA5LTE2fDE2OTE4NjMwMDM3MDczNTQ2MTEy">
+              <img src="../../assets/img/noticia.png">
+              Agenda & Noticias
+            </a>
+            <a
+              href="https://www.google.com/search?client=opera&q=eventos+em+sp&sourceid=opera&ie=UTF-8&oe=UTF-8&ibp=htl;events&rciv=evn&sxsrf=ALeKk033QwOiMGF6_nflwIoGlNdVocL6XA:1629738916813#htivrt=events&htidocid=L2F1dGhvcml0eS9ob3Jpem9uL2NsdXN0ZXJlZF9ldmVudC8yMDIxLTA0LTMwfF8xMDE1MTYxNDYyOTU5ODg3MDkwNQ%3D%3D&fpstate=tldetail">
+              <img src="../../assets/img/evento.png">
+              Eventos
+            </a>
+            <a href="https://www.gov.br/turismo/pt-br/acesso-a-informacao/acoes-e-programas/qualificacao">
+              <img src="../../assets/img/governo.png">
+              Ministério do Turismo
+            </a>
+            <a href="https://www.gov.br/saude/pt-br/coronavirus/como-se-proteger">
+              <img src="../../assets/img/covid.png">
+              Alerta COVID-19
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+    <!-- Fim do card perfil -->
+
+    <!-- inicio do feed -->
+
+    <div class="col-md-6 flex-column borda mt-5">
+
+
+      <div class="post-row perfil-post mb-3 pt-2 pb-2 borda" *ngFor='let item of listaPostagem | orderBy: key: reverse'>
+        <div class="user-profile">
+          <div class="userpostagem d-flex ml-2">
+            <img src="{{item.usuario.foto}}">
+            <div class="columns">
+
+              <p class="p-0 m-0"> <i>{{item.usuario.nome}}</i></p>
+              <p class="text-muted p-0 m-0">Reside em: {{item.usuario.local}}</p>
+              <p class="text-muted p-0 m-0">Publicado dia: <i>{{item.data | date: 'dd/MM/yyyy'}} às
+                  {{item.data | date: 'HH:mm'}} </i></p>
+            </div>
+
+          </div>
+
+          <div class="feed-icon px-2 social-action dropdown pull-right" *ngIf=' item.usuario.id == id'>
+
+
+          </div>
+
+          <div>
+            <p class="ml-2"><b>Temática:</b> {{item.tema.temaPostagem}}</p>
+            <p class="ml-2"><b>Local:</b> {{item.titulo}}</p>
+            <p class="ml-2"><b>Localizado em:</b> {{item.agenda}}</p>
+
+            <p class="ml-2"><b>Tipo de ambiente:</b> {{item.tema.ambientacao}}</p>
+          </div>
+        </div>
+        <p class="ml-2"><b>Sobre o lugar:</b> {{item.texto}}</p>
+        <img src="{{item.fotoPostagem}}" class="post-img" height="460">
+        <div class="post-row">
+          <div class="activity-icons text-center">
+            <button class="btn" (click)='getPostagemById(item.id)' (click)='descurtida(item.id)'>
+              <img src="../../assets/icons/dislike.png">
+            </button>
+            <b></b> {{ item.curtidas }}
+            <button class="btn" (click)='getPostagemById(item.id)' (click)='curtida(item.id)'>
+              <img src="../../assets/icons/like (2).png">
+            </button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-2 bt-postagem">
+          <a [routerLink]="['/postagem-edit', item.id]" class="btn-sucess text-info mr-3 ml-2" href="">Editar</a>
+          <a [routerLink]="['/postagem-delete', item.id]" class="btn-danger text-danger" href="">Apagar</a>
+        </div>
+      </div>
+    </div>
+    <!-- final do feed -->
+
+
+    <!-- menu direita -->
+    <div class="col-md-3 mt-5 d-md-block right-sidebar borda menu-direito">
+
+      <div class="sidebar-title mt-3">
+        <h4>Lugares perto de você</h4>
+        <a href="#">Veja Tudo</a>
+      </div>
+      <div class="event">
+        <div class="left-event">
+          <h3>SP</h3>
+          <span></span>
+        </div>
+        <div class="right-event">
+          <h4>Praia Grande</h4>
+          <p>
+            <i class="fa fa-map-marker"></i>
+            Baixada Santista
+          </p>
+          <a href="https://www.praiagrande.sp.gov.br/HomePortal-.asp?cd_pagina=71">Mais informações</a>
+        </div>
+      </div>
+      <div class="event">
+        <div class="left-event">
+          <h3>SP</h3>
+          <span></span>
+        </div>
+        <div class="right-event">
+          <h4>Bar do Vodka</h4>
+          <p>
+            <i class="fa fa-map-marker"></i>
+            Perto daqui po
+          </p>
+          <a href="https://github.com/fernandocaruso">Mais informações</a>
+        </div>
+      </div>
+
+      <div class="sidebar-title">
+        <h4>Explorar</h4>
+        <a routerLink="/explorar">Mais Informações</a>
+      </div>
+      <img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2020/10/feriado-prolongado-2021-dicas.jpg"
+        class="explorar">
+
+      <div class="sidebar-title text-center">
+        <h4 ><b>Usuarios recorrentes</b> </h4>
+      </div>
+      <div class="usuarios">
+        <div class="online mt-2 ">
+          <img
+            src="https://images-ext-2.discordapp.net/external/mfuFupdCoH34cKVJMmQzeL63qfCzSpUjUcz3KQIYwM4/%3F_nc_cat%3D107%26ccb%3D1-5%26_nc_sid%3D09cbfe%26_nc_eui2%3DAeHs2HzC_H_G6bNLu3sHvVpJKd9x9DVPCDQp33H0NU8INJtJNmxT6UxV8HO1tSpl5ufVi9U3ydo9WoMstQ6z7sAK%26_nc_ohc%3D0qLb31yksrkAX9hkprl%26_nc_ht%3Dscontent.fcgh16-1.fna%26oh%3D4dbc51af16e2d0739565ba1a0a2050bc%26oe%3D614A74D6/https/scontent.fcgh16-1.fna.fbcdn.net/v/t1.18169-9/1381589_559278854138207_862652481_n.jpg?width=473&height=473">
+        </div>
+        <p>Diego Perez</p>
+      </div>
+      <div class="usuarios">
+        <div class="online mt-5 ">
+          <img
+            src="https://images-ext-2.discordapp.net/external/i9ISB5dQRaKPEBSUCVmvEYQmrbCqZaqwYSwRymZ5m0o/%3F_nc_cat%3D109%26ccb%3D1-5%26_nc_sid%3D09cbfe%26_nc_eui2%3DAeFRITm4xqR9t2C3La82TbRYCpHxJiJcKZwKkfEmIlwpnGVW9p98zBWihp5T667YmtMRzH8Hd_FsobVTtMKbNv4W%26_nc_ohc%3DiY0bXAwQtGsAX_wqeSu%26_nc_ht%3Dscontent.fcgh16-1.fna%26oh%3Dd85d2a2381be912ecbe29e5cb5311ff3%26oe%3D6149E59F/https/scontent.fcgh16-1.fna.fbcdn.net/v/t1.6435-9/66436607_2861203117227792_8975277618983075840_n.jpg?width=470&height=473">
+        </div>
+        <p>Victor Agostinho</p>
+      </div>
+
+      <div class="usuarios">
+        <div class="online mt-5">
+          <img
+            src="https://images-ext-1.discordapp.net/external/4s5gbFRarTTLQ4eXGNdPp2od8b3xQzNES9_xiA4eETo/%3F_nc_ht%3Dinstagram.fcgh16-1.fna.fbcdn.net%26_nc_cat%3D107%26_nc_ohc%3D6cf038Qf21YAX89g1Q4%26edm%3DAABBvjUBAAAA%26ccb%3D7-4%26oh%3D92a9f5186ce0ed80063d54a1c7c49576%26oe%3D612AD97A%26_nc_sid%3D83d603/https/instagram.fcgh16-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/239191862_110386661354107_2802056601761405755_n.jpg?width=473&height=473">
+        </div>
+        <p>Polianna Caruso</p>
+      </div>
+      <div class="usuarios">
+        <div class="online mt-5
+        ">
+          <img
+            src="https://media.discordapp.net/attachments/879417696704397345/879465968823332864/WhatsApp_Image_2021-08-23_at_14.12.04.jpeg?width=421&height=472">
+        </div>
+        <p>Leticia Matias</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+     @@@@@@@@@@@@@@@@@@       INICIO MODAL POSTAGEM       @@@@@@@@@@@@@@@@@@
+     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+<div class="modal fade modal-edit" id="novaPostagem" tabindex="-1" role="dialog"
+  aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input class="form-control" [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
+            placeholder="Digite o título da nova postagem">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea class="form-control" [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto"
+            placeholder="Descreva um pouco sobre o lugar" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="fotoPostagem">Foto do Lugar</label>
+          <textarea class="form-control" [(ngModel)]='postagem.fotoPostagem' class="form-control" name="fotoPostagem"
+            id="fotoPostagem" placeholder="Uma imagem vale mais que mil palavras!" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Localização</label>
+          <textarea class="form-control" [(ngModel)]='postagem.agenda' class="form-control" name="endereco"
+            id="endereco" placeholder="Digite o endereço do lugar" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Contato</label>
+          <textarea class="form-control" [(ngModel)]='postagem.contato' class="form-control" name="contato" id="contato"
+            placeholder="Digite um site ou telefone para contato do lugar" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>:
+          </label>
+          <select class="form-control" name="tema" id="tema" class="form-control" [(ngModel)]='idTema'
+            (change)='findByIdTema()'>
+            <option *ngFor='let item of listaTemas' value="{{item.id}}">
+              {{item.temaPostagem}}</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-modalcancela" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-modalpublicar" (click)='publicar()' data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+
+
+</div> <!-- DIV FECHAMENTO MODAL! -->
+
+
+
+<!-- DIV FECHAMENTO DA DIV PRINCIPAL INICIAL -->
